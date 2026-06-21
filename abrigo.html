@@ -1,105 +1,134 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Nosso Abrigo</title>
-
-```
-<style>
-    body{
-        background-color: #B0E0E6;
-        font-family: Arial, sans-serif;
-    }
-
-    .banner{
-        height: 50vh;
-        background-image:
-            linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
-            url('./imagens/cachorro-pobre.jpg');
-        background-size: cover;
-        background-position: center;
-        color: white;
-    }
-</style>
-```
-
+    <title>Amigos em Ação</title>
 </head>
 <body>
 
-```
-<header class="p-3 border-bottom bg-white">
-    <div class="container">
-        <a href="index.html" class="btn btn-outline-primary">
-            ← Voltar para a página inicial
-        </a>
-    </div>
-</header>
-
-<section class="banner d-flex align-items-center justify-content-center text-center">
-    <div>
-        <h1 class="display-4 fw-bold">Conheça Nosso Abrigo</h1>
-        <p class="lead">
-            Um lugar de amor, cuidado e esperança para centenas de cães resgatados.
-        </p>
-    </div>
-</section>
-
-<section class="container py-5">
-    <h2 class="fw-bold mb-4">Nossa História</h2>
-
-    <p>
-        Desde 2017, nossa ONG atua no resgate de animais abandonados,
-        oferecendo alimentação, tratamento veterinário e muito carinho.
-    </p>
-
-    <p>
-        Atualmente abrigamos centenas de cães que aguardam uma nova família.
-        Cada animal recebe cuidados diários e acompanhamento para garantir
-        saúde e bem-estar.
-    </p>
-</section>
-
-<section class="container py-4">
-    <div class="row g-4">
-
-        <div class="col-md-4">
-            <img src="./imagens/cachorro-branco.jpg"
-                 class="img-fluid rounded shadow">
+    
+    <div class="acessibilidade-panel">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center gap-3">
+                <span class="fw-bold small">
+                    <i class="fas fa-universal-access me-2"></i>Acessibilidade
+                </span>
+                
+                <div class="btn-group btn-group-sm">
+                    <button class="btn btn-outline-secondary" onclick="contrasteNormal()" title="Modo normal">
+                        <i class="fas fa-circle me-1"></i>Normal
+                    </button>
+                    <button class="btn btn-outline-secondary" onclick="contrasteAlto()" title="Alto contraste">
+                        <i class="fas fa-circle me-1" style="color: #000;"></i>Alto
+                    </button>
+                    <button class="btn btn-outline-secondary" onclick="contrasteEscuro()" title="Modo escuro">
+                        <i class="fas fa-circle me-1" style="color: #fff; background: #000; border-radius: 50%; padding: 0 4px;"></i>Escuro
+                    </button>
+                </div>
+                
+                <div class="btn-group btn-group-sm">
+                    <button class="btn btn-outline-secondary" onclick="fonteMenor()" title="Diminuir fonte">A-</button>
+                    <button class="btn btn-outline-secondary" onclick="fonteNormal()" title="Fonte normal">A</button>
+                    <button class="btn btn-outline-secondary" onclick="fonteMaior()" title="Aumentar fonte">A+</button>
+                </div>
+            </div>
         </div>
-
-        <div class="col-md-4">
-            <img src="./imagens/cachorro-filhote.jpg"
-                 class="img-fluid rounded shadow">
-        </div>
-
-        <div class="col-md-4">
-            <img src="./imagens/cachorro-preto.jpg"
-                 class="img-fluid rounded shadow">
-        </div>
-
     </div>
-</section>
 
-<section class="container py-5">
-    <div class="bg-light rounded p-4 shadow-sm text-center">
-        <h2>Como ajudar?</h2>
+    
+    <header class="p-3 mb-3 border-bottom">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"> 
+                    <li><a href="cadastro.html" class="nav-link px-2 link-primary fw-bold">Agendar Visita</a></li> 
+                    <a href="abrigo.html" class="btn btn-warning">Conheça o abrigo</a>
+                    <button class="btn btn-success rounded-pill">💰 Doar agora</button>
+                </ul>
+            </div>
+        </div>  
+    </header>
 
-        <p>
-            Você pode ajudar adotando, doando ração,
-            contribuindo financeiramente ou atuando como voluntário.
-        </p>
-
-        <button class="btn btn-success">
-            Quero ajudar
-        </button>
+    
+    <div class="bg-primary text-center d-flex align-items-center justify-content-center text-white"
+        style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./imagens/cachorro-maldito.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; min-height: 40vh;">
+        <div class="w-50">
+            <h1 class="fw-bold">O que nos une é o amor pelos bichos</h1>
+            <p class="fw-lighter">Somos uma ONG de proteção animal voluntária e sobrevivemos graças ao apoio de pessoas como você que acreditam em nosso trabalho.</p>
+            <a href="abrigo.html" class="btn btn-warning">Conheça o abrigo</a>
+        </div>
     </div>
-</section>
-```
+
+    
+    <div class="d-flex flex-row align-items-center justify-content-center mt-5 gap-3">
+        <img src="./imagens/cachorro-pobre.jpg" class="rounded-circle w-25" alt="Cachorro caramelo olhando com olhos tristes">
+        <div class="w-25">
+            <h1 class="fw-bold">Resgatar é um ato de amor</h1>
+            <p class="text-secondary text-wrap text-justify">
+                Fundada em janeiro de 2017, a Associação Amigos Em Ação Patas Solidárias 
+                é uma Organização Não Governamental que tem como missão resgatar e cuidar de animais vítimas de abandono e maus tratos.
+            </p>
+            <p class="text-secondary text-wrap text-justify">
+                Após o resgate, o compromisso de proporcionar um lar com muito amor e carinho para os resgatados.
+                Mantemos um abrigo com cerca de 400 cães, todos resgatados das ruas, onde eles são protegidos, alimentados e aguardam pela 
+                chance de serem adotados.
+            </p>
+        </div>
+    </div>
+
+    
+    <div class="text-center">
+        <h1>Veja os cães de rua</h1>
+        <p>Aqui mora a chance de encontrar seu melhor amigo</p>
+        <div class="container text-center">
+            <div class="row row-cols-2 row-gap-3">
+                <div class="col">
+                    <img src="./imagens/cachorro-branco.jpg" class="img-fluid rounded-3 shadow-sm" alt="Cachorro branco deitado em um gramado, olhando para a câmera de forma carinhosa">
+                </div>
+                <div class="col">
+                    <img src="./imagens/cachorro-filhote.jpg" class="img-fluid rounded-3 shadow-sm" alt="Filhote de cachorro marrom brincando com uma bolinha vermelha">
+                </div>
+                <div class="col">
+                    <img src="./imagens/cachorro_fofo.jpg" class="img-fluid rounded-3 shadow-sm" alt="Cachorro fofo usando uma roupinha azul">
+                </div>
+                <div class="col">
+                    <img src="./imagens/cachorro-preto.jpg" class="img-fluid rounded-3 shadow-sm" alt="Cachorro preto e branco olhando para a câmera">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-paw me-2"></i>Amigos em Ação
+                    </h5>
+                    <p>Protegendo e encontrando lares para animais abandonados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5 class="fw-bold mb-3">Contato</h5>
+                    <p>
+                        <i class="fas fa-phone me-2"></i>(11) 99999-9999<br>
+                        <i class="fas fa-envelope me-2"></i>contato@amigosemacao.org
+                    </p>
+                </div>
+            </div>
+            <hr class="border-light mt-3">
+            <p class="text-center mb-0 small">
+                &copy; 2026 Amigos em Ação Patas Solidárias. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="acessibilidade.js"></script>
+
 </body>
 </html>

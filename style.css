@@ -1,0 +1,267 @@
+/*  CORPO DA PÁGINA */
+body {
+    background-color: #B0E0E6;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 100%;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+/* HEADER  */
+.header-custom {
+    background-color: white;
+    padding: 15px 0;
+    border-bottom: 2px solid #0d6efd;
+}
+
+/* BANNER */
+.banner-cadastro {
+    background: linear-gradient(135deg, #1a2a6c, #0d6efd);
+    padding: 60px 0;
+    color: white;
+    text-align: center;
+}
+
+/* CARD DO FORMULÁRIO */
+.card-cadastro {
+    background: white;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    padding: 40px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+}
+
+.card-cadastro .form-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.card-cadastro .form-control {
+    border-radius: 10px;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s;
+}
+
+.card-cadastro .form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* BOTÃO AGENDAR */
+.btn-cadastrar {
+    background: linear-gradient(135deg, #0d6efd, #0a58ca);
+    color: white;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.btn-cadastrar:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 20px rgba(13, 110, 253, 0.4);
+    color: white;
+}
+
+/* ÍCONES NOS INPUTS */
+.input-icon {
+    position: relative;
+}
+
+.input-icon i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+.input-icon .form-control {
+    padding-left: 45px;
+}
+
+/* MENSAGEM DE SUCESSO */
+.mensagem-sucesso {
+    display: none;
+    background: linear-gradient(135deg, #198754, #157347);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    animation: fadeInUp 0.6s ease;
+}
+
+.mensagem-sucesso i {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RODAPÉ */
+.footer {
+    background: linear-gradient(135deg, #1a2a6c, #0d6efd);
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: auto;
+}
+
+.footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .card-cadastro {
+        padding: 25px;
+        margin-top: -30px;
+    }
+    
+    .banner-cadastro {
+        padding: 40px 0;
+    }
+}
+
+/* ESTILOS DE ACESSIBILIDADE - ABNT NBR 17225 */
+
+/* 5.12.7 - Espaçamento entre linhas */
+p, .text-content, .lead, .form-label {
+    line-height: 1.6;
+}
+
+/* 5.12.2 - Espaçamento entre palavras */
+p, .text-content {
+    word-spacing: 0.16em;
+    letter-spacing: 0.12em;
+}
+
+/* ---- 5.12.1 - Alinhamento justificado ---- */
+.text-justify {
+    text-align: justify;
+}
+
+/* 5.12.3 - Espaçamento entre parágrafos */
+p {
+    margin-bottom: 1.5em;
+}
+
+/* Painel de Acessibilidade */
+.acessibilidade-panel {
+    background-color: #f8f9fa !important;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.acessibilidade-panel .btn-group {
+    gap: 4px;
+}
+
+/* 5.11.2 - Contraste Alto (7:1)  */
+body.contraste-alto {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+}
+
+body.contraste-alto .card-cadastro,
+body.contraste-alto .card,
+body.contraste-alto .header-custom {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+body.contraste-alto .form-control {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+}
+
+body.contraste-alto .btn-primary,
+body.contraste-alto .btn-cadastrar {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    border-color: #000000 !important;
+}
+
+body.contraste-alto a {
+    color: #0000EE !important;
+}
+
+body.contraste-alto .footer {
+    background: #000000 !important;
+}
+
+body.contraste-alto .banner-cadastro {
+    background: #000000 !important;
+}
+
+/* Modo Escuro  */
+body.contraste-escuro {
+    background-color: #1A1A1A !important;
+    color: #E0E0E0 !important;
+}
+
+body.contraste-escuro .card-cadastro,
+body.contraste-escuro .card,
+body.contraste-escuro .header-custom {
+    background-color: #2D2D2D !important;
+    color: #E0E0E0 !important;
+    border-color: #444444 !important;
+}
+
+body.contraste-escuro .form-control {
+    background-color: #333333 !important;
+    color: #E0E0E0 !important;
+    border: 2px solid #555555 !important;
+}
+
+body.contraste-escuro .form-control:focus {
+    border-color: #4A9EFF !important;
+    box-shadow: 0 0 0 0.2rem rgba(74, 158, 255, 0.25);
+}
+
+body.contraste-escuro .btn-primary,
+body.contraste-escuro .btn-cadastrar {
+    background-color: #0D6EFD !important;
+    color: #FFFFFF !important;
+}
+
+body.contraste-escuro a {
+    color: #4A9EFF !important;
+}
+
+body.contraste-escuro .footer {
+    background: #0D0D0D !important;
+}
+
+body.contraste-escuro .banner-cadastro {
+    background: #0D0D0D !important;
+}

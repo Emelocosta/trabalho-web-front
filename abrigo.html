@@ -6,18 +6,40 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Amigos em Ação</title>
+    <title>Nosso Abrigo - Amigos em Ação</title>
+    <style>
+        .banner-abrigo {
+            background: linear-gradient(135deg, #1a2a6c, #0d6efd);
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+        .card-missao {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        .card-missao:hover {
+            transform: translateY(-5px);
+        }
+        .icone-missao {
+            font-size: 3rem;
+            color: #0d6efd;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
 
-    
+    <!-- ===== PAINEL DE ACESSIBILIDADE ===== -->
     <div class="acessibilidade-panel">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center gap-3">
                 <span class="fw-bold small">
                     <i class="fas fa-universal-access me-2"></i>Acessibilidade
                 </span>
-                
                 <div class="btn-group btn-group-sm">
                     <button class="btn btn-outline-secondary" onclick="contrasteNormal()" title="Modo normal">
                         <i class="fas fa-circle me-1"></i>Normal
@@ -29,7 +51,6 @@
                         <i class="fas fa-circle me-1" style="color: #fff; background: #000; border-radius: 50%; padding: 0 4px;"></i>Escuro
                     </button>
                 </div>
-                
                 <div class="btn-group btn-group-sm">
                     <button class="btn btn-outline-secondary" onclick="fonteMenor()" title="Diminuir fonte">A-</button>
                     <button class="btn btn-outline-secondary" onclick="fonteNormal()" title="Fonte normal">A</button>
@@ -39,69 +60,113 @@
         </div>
     </div>
 
-    
-    <header class="p-3 mb-3 border-bottom">
+    <!-- ===== HEADER ===== -->
+    <header class="p-3 mb-3 border-bottom bg-white">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"> 
-                    <li><a href="cadastro.html" class="nav-link px-2 link-primary fw-bold">Agendar Visita</a></li> 
-                    <a href="abrigo.html" class="btn btn-warning">Conheça o abrigo</a>
-                    <button class="btn btn-success rounded-pill">💰 Doar agora</button>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="cadastro.html" class="nav-link px-2 link-primary fw-bold">Agendar Visita</a></li>
+                    <li><a href="abrigo.html" class="btn btn-warning" style="margin-left: 10px;">Conheça o abrigo</a></li>
+                    <li><button class="btn btn-success rounded-pill" style="margin-left: 10px;">💰 Doar agora</button></li>
                 </ul>
             </div>
-        </div>  
+        </div>
     </header>
 
-    
-    <div class="bg-primary text-center d-flex align-items-center justify-content-center text-white"
-        style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./imagens/cachorro-maldito.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; min-height: 40vh;">
-        <div class="w-50">
-            <h1 class="fw-bold">O que nos une é o amor pelos bichos</h1>
-            <p class="fw-lighter">Somos uma ONG de proteção animal voluntária e sobrevivemos graças ao apoio de pessoas como você que acreditam em nosso trabalho.</p>
-            <a href="abrigo.html" class="btn btn-warning">Conheça o abrigo</a>
-        </div>
-    </div>
-
-    
-    <div class="d-flex flex-row align-items-center justify-content-center mt-5 gap-3">
-        <img src="./imagens/cachorro-pobre.jpg" class="rounded-circle w-25" alt="Cachorro caramelo de porte pequeno olhando para a câmera com expressão triste">
-        <div class="w-25">
-            <h1 class="fw-bold">Resgatar é um ato de amor</h1>
-            <p class="text-secondary text-wrap text-justify">
-                Fundada em janeiro de 2017, a Associação Amigos Em Ação Patas Solidárias 
-                é uma Organização Não Governamental que tem como missão resgatar e cuidar de animais vítimas de abandono e maus tratos.
-            </p>
-            <p class="text-secondary text-wrap text-justify">
-                Após o resgate, o compromisso de proporcionar um lar com muito amor e carinho para os resgatados.
-                Mantemos um abrigo com cerca de 400 cães, todos resgatados das ruas, onde eles são protegidos, alimentados e aguardam pela 
-                chance de serem adotados.
+    <!-- ===== BANNER DO ABRIGO ===== -->
+    <section class="banner-abrigo">
+        <div class="container">
+            <h1 class="display-3 fw-bold">
+                <i class="fas fa-home me-3"></i>Nosso Abrigo
+            </h1>
+            <p class="lead">
+                Um lugar de amor, cuidado e esperança para centenas de animais resgatados.
             </p>
         </div>
-    </div>
+    </section>
 
-    
-    <div class="text-center">
-        <h1>Veja os cães de rua</h1>
-        <p>Aqui mora a chance de encontrar seu melhor amigo</p>
-        <div class="container text-center">
-            <div class="row row-cols-2 row-gap-3">
-                <div class="col">
-                    <img src="./imagens/cachorro-branco.jpg" class="img-fluid rounded-3 shadow-sm" alt="Cachorro branco deitado em um gramado, olhando para a câmera de forma carinhosa">
+    <!-- ===== NOSSA HISTÓRIA ===== -->
+    <section class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="fw-bold mb-4">Nossa História</h2>
+                <p class="text-justify" style="font-size: 1.1rem;">
+                    Fundada em <strong>janeiro de 2017</strong>, a Associação Amigos Em Ação Patas Solidárias 
+                    é uma Organização Não Governamental (ONG) que tem como missão resgatar e cuidar 
+                    de animais vítimas de abandono e maus tratos.
+                </p>
+                <p class="text-justify" style="font-size: 1.1rem;">
+                    Após o resgate, nosso compromisso é proporcionar um lar com muito amor e carinho 
+                    para os resgatados. Mantemos um abrigo com cerca de <strong>400 cães</strong>, 
+                    todos resgatados das ruas, onde eles são protegidos, alimentados e aguardam pela 
+                    chance de serem adotados.
+                </p>
+                <p class="text-justify" style="font-size: 1.1rem;">
+                    Acreditamos que cada animal merece uma segunda chance e trabalhamos incansavelmente 
+                    para encontrar lares amorosos para cada um deles.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MISSÃO, VISÃO E VALORES ===== -->
+    <section class="container py-5">
+        <h2 class="fw-bold text-center mb-5">Nossos Pilares</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card-missao p-4 text-center">
+                    <div class="icone-missao">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4 class="fw-bold">Missão</h4>
+                    <p>Resgatar, proteger e encontrar lares amorosos para animais abandonados.</p>
                 </div>
-                <div class="col">
-                    <img src="./imagens/cachorro-filhote.jpg" class="img-fluid rounded-3 shadow-sm" alt="Filhote de cachorro marrom brincando com uma bolinha vermelha">
+            </div>
+            <div class="col-md-4">
+                <div class="card-missao p-4 text-center">
+                    <div class="icone-missao">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h4 class="fw-bold">Visão</h4>
+                    <p>Ser referência em proteção animal e inspirar mudanças na sociedade.</p>
                 </div>
-                <div class="col">
-                    <img src="./imagens/cachorro_fofo.jpg" class="img-fluid rounded-3 shadow-sm" alt="Cachorro fofo usando uma roupinha azul">
-                </div>
-                <div class="col">
-                    <img src="./imagens/cachorro-preto.jpg" class="img-fluid rounded-3 shadow-sm" alt="Cachorro preto e branco olhando para a câmera">
+            </div>
+            <div class="col-md-4">
+                <div class="card-missao p-4 text-center">
+                    <div class="icone-missao">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4 class="fw-bold">Valores</h4>
+                    <p>Amor, respeito, empatia, compromisso com a vida e transparência.</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    
+    <!-- ===== COMO AJUDAR ===== -->
+    <section class="container py-5">
+        <div class="bg-light rounded-4 p-5 text-center shadow-sm">
+            <h2 class="fw-bold mb-4">Como Você Pode Ajudar?</h2>
+            <p class="lead mb-4">
+                Existem várias formas de fazer a diferença na vida desses animais.
+            </p>
+            <div class="row g-3 justify-content-center">
+                <div class="col-md-3">
+                    <a href="cadastro.html" class="btn btn-primary btn-lg w-100">
+                        <i class="fas fa-calendar-check me-2"></i>Agendar Visita
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-success btn-lg w-100">
+                        <i class="fas fa-hand-holding-heart me-2"></i>Doar Agora
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
             <div class="row g-4">
@@ -126,7 +191,7 @@
         </div>
     </footer>
 
-   
+    <!-- ===== JAVASCRIPT ===== -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="acessibilidade.js"></script>
 

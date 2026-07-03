@@ -150,3 +150,8 @@ function mascaraTelefone(input) {
     
     input.value = valor;
 }
+
+// FUNÇÃO PARA MOSTRAR INFORMAÇÕES DO PIX
+function mostrarPix() {
+    alert("Pix: doacao@doacao.com");
+}

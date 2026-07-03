@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Amigos em Ação</title>
     <style>
         body {
             font-family: "Arial", sans-serif;
@@ -45,35 +45,28 @@
     </div>
     <header class="p-3 mb-3 border-bottom">
         <div class="container">
-
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"> 
-    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="cadastro.html" class="nav-link px-2 link-primary fw-bold">Agendar Visita</a></li>
-        <li><a href="abrigo.html" class="btn btn-warning" style="margin-left: 10px;">Conheça o abrigo</a></li>
-        <li><button class="btn btn-success rounded-pill" style="margin-left: 10px;" onclick="mostrarPix()">💰 Doar agora</button></li>
-    </ul>
-</div>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="cadastro.html" class="nav-link px-2 link-primary fw-bold">Agendar Visita</a></li>
+                    <li><a href="abrigo.html" class="nav-link px-2 link-primary fw-bold" style="margin-left: 10px;">Conheça o abrigo</a></li>
+                    <li><button class="btn btn-success rounded-pill" style="margin-left: 10px;" onclick="mostrarPix()">💰 Doar agora</button></li>
+                </ul>
+            </div>
         </div>  
     </header>
-   <div class="bg-primary text-center d-flex align-items-center justify-content-center text-white"
-     style="
-        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-        url('./imagens/cachorro-maldito.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        min-height: 40vh;
-     ">
+    
+    <div class="banner-index text-center d-flex align-items-center justify-content-center text-white"
+        style="background: linear-gradient(135deg, #1a2a6c, #0d6efd); min-height: 40vh;">
         <div class="w-50">
             <h1 class="fw-bold">O que nos une é o amor pelos bichos</h1>
             <p class="fw-lighter">Somos uma ONG de proteção animal voluntária e sobrevivemos graças ao apoio de pessoas como você que acreditam em nosso trabalho.</p>
-
         </div>
     </div>
+    
     <div class="d-flex flex-row align-items-center justify-content-center mt-5 gap-3">
         <img src="./imagens/cachorro-pobre.jpg" class="rounded-circle w-25" alt="Cachorro caramelo olhando com olhos tristes">
         <div class="w-25">
-            <h1 class="fw-bold">Resgatar é um ato de amor </h1>
+            <h1 class="fw-bold">Resgatar é um ato de amor</h1>
             <p class="text-secondary text-wrap">
                 Fundada em janeiro de 2017, a Associação Amigos Em Ação Patas Solidárias 
                 é uma Organização Não Governamental que tem como missão resgatar e cuidar de animais vítimas de abandono e maus tratos. 
@@ -83,14 +76,11 @@
                 Mantemos um abrigo com cerca de 400 cães, todos resgatados das ruas, onde eles são protegidos, alimentados e aguardam pela 
                 chance de serem adotados.
             </p>
-
-
         </div>
     </div>
 
     <div class="text-center"> 
-
-        <h1> Veja os cães de rua </h1>
+        <h1>Veja os cães de rua</h1>
         <p>Aqui mora a chance de encontrar seu melhor amigo</p>
         <div class="container text-center">
             <div class="row row-cols-2 row-gap-3">
@@ -102,7 +92,6 @@
                 <div class="col">
                     <img src="./imagens/cachorro-filhote.jpg" 
                     class="img-fluid rounded-3 shadow-sm"
-                    
                     alt="Cachorro filhotinho">
                 </div>
                 <div class="col">
@@ -116,11 +105,43 @@
                     alt="cachorro bonitinho">
                 </div>
             </div>
-            <!-- <div class="row">
-            </div> -->
         </div>
     </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-paw me-2"></i>Amigos em Ação
+                    </h5>
+                    <p>Protegendo e encontrando lares para animais abandonados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5 class="fw-bold mb-3">Desenvolvedores</h5>
+                    <p class="mb-1">
+                        <i class="fas fa-user me-2"></i>
+                        <a href="https://rotydpd.github.io/meu-curriculo/" target="_blank" class="text-white text-decoration-none">
+                        Rômulo Augusto
+                        </a>
+                    </p>
+                    <p>
+                        <i class="fas fa-user me-2"></i>
+                        <a href="https://emelocosta.github.io/curriculo/" target="_blank" class="text-white text-decoration-none">
+                        Ezequiel Melo
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <hr class="border-light mt-3">
+            <p class="text-center mb-0 small">
+                &copy; 2026 Amigos em Ação Patas Solidárias. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="acessibilidade.js"></script>
 </body>
 </html>
